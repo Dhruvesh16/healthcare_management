@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCare - Hospital Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <i data-lucide="stethoscope" class="logo-icon"></i>
+        <h1>MediCare</h1>
+      </div>
+      
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i data-lucide="users"></i>Patients</a>
+          </li>
+          <li>
+            <a href="#"><i data-lucide="calendar-clock"></i>Appointments</a>
+          </li>
+          <li>
+            <a href="#"><i data-lucide="stethoscope"></i>Doctors</a>
+          </li>
+          <li>
+            <a href="#"><i data-lucide="clipboard-list"></i>Records</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button><i data-lucide="settings"></i>Settings</button>
+        <button><i data-lucide="log-out"></i>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- Header -->
+      <header>
+        <div class="search">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Search patients, doctors, or departments...">
+        </div>
+
+        <div class="header-right">
+          <button class="notification">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          
+          <div class="user">
+            <div class="user-info">
+              <p class="user-name">Dr. Sarah Wilson</p>
+              <p class="user-role">Head of Cardiology</p>
+            </div>
+            <div class="user-avatar">
+              <i data-lucide="user"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <div class="dashboard">
+        <div class="welcome">
+          <h1>Welcome back, Dr. Wilson</h1>
+          <p>Here's what's happening at MediCare today.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon blue">
+                <i data-lucide="users"></i>
+              </div>
+              <span class="change positive">+12.5%</span>
+            </div>
+            <h3>1,284</h3>
+            <p>Total Patients</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon green">
+                <i data-lucide="calendar-clock"></i>
+              </div>
+              <span class="change positive">+8.1%</span>
+            </div>
+            <h3>42</h3>
+            <p>Appointments Today</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon purple">
+                <i data-lucide="activity"></i>
+              </div>
+              <span class="change negative">-2.3%</span>
+            </div>
+            <h3>156</h3>
+            <p>Active Cases</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon orange">
+                <i data-lucide="trending-up"></i>
+              </div>
+              <span class="change positive">+3.2%</span>
+            </div>
+            <h3>94.2%</h3>
+            <p>Recovery Rate</p>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="card">
+            <h2>Department Status</h2>
+            <div class="departments">
+              <div class="department">
+                <div>
+                  <h3>Cardiology</h3>
+                  <p>45 patients</p>
+                </div>
+                <div class="occupancy">
+                  <div class="occupancy-header">
+                    <span>Occupancy</span>
+                    <span>82%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 82%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department">
+                <div>
+                  <h3>Neurology</h3>
+                  <p>32 patients</p>
+                </div>
+                <div class="occupancy">
+                  <div class="occupancy-header">
+                    <span>Occupancy</span>
+                    <span>74%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 74%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department">
+                <div>
+                  <h3>Pediatrics</h3>
+                  <p>28 patients</p>
+                </div>
+                <div class="occupancy">
+                  <div class="occupancy-header">
+                    <span>Occupancy</span>
+                    <span>65%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department">
+                <div>
+                  <h3>Orthopedics</h3>
+                  <p>36 patients</p>
+                </div>
+                <div class="occupancy">
+                  <div class="occupancy-header">
+                    <span>Occupancy</span>
+                    <span>78%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 78%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Recent Admissions</h2>
+            <div class="admissions">
+              <div class="admission">
+                <div class="admission-avatar"></div>
+                <div class="admission-info">
+                  <h3>Patient #1</h3>
+                  <p>Admitted 2 hours ago</p>
+                </div>
+                <span class="status">Stable</span>
+              </div>
+
+              <div class="admission">
+                <div class="admission-avatar"></div>
+                <div class="admission-info">
+                  <h3>Patient #2</h3>
+                  <p>Admitted 2 hours ago</p>
+                </div>
+                <span class="status">Stable</span>
+              </div>
+
+              <div class="admission">
+                <div class="admission-avatar"></div>
+                <div class="admission-info">
+                  <h3>Patient #3</h3>
+                  <p>Admitted 2 hours ago</p>
+                </div>
+                <span class="status">Stable</span>
+              </div>
+
+              <div class="admission">
+                <div class="admission-avatar"></div>
+                <div class="admission-info">
+                  <h3>Patient #4</h3>
+                  <p>Admitted 2 hours ago</p>
+                </div>
+                <span class="status">Stable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
