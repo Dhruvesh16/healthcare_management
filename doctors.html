@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCare - Doctors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="doctors.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <i data-lucide="stethoscope" class="logo-icon"></i>
+        <h1>MediCare</h1>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="patients.html"><i data-lucide="users"></i>Patients</a>
+          </li>
+          <li>
+            <a href="appointments.html"><i data-lucide="calendar-clock"></i>Appointments</a>
+          </li>
+          <li class="active">
+            <a href="doctors.html"><i data-lucide="stethoscope"></i>Doctors</a>
+          </li>
+          <li>
+            <a href="records.html"><i data-lucide="clipboard-list"></i>Records</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button><i data-lucide="settings"></i>Settings</button>
+        <button><i data-lucide="log-out"></i>Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <div class="header-content">
+          <button class="notification">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          
+          <div class="user">
+            <div class="user-info">
+              <p class="user-name">Dr. Sarah Wilson</p>
+              <p class="user-role">Head of Cardiology</p>
+            </div>
+            <div class="user-avatar">
+              <i data-lucide="user"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Doctors -->
+      <section id="doctors">
+        <h2>Doctors</h2>
+        <div class="doctors-content">
+          <table class="doctors-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Contact</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Dr. John Smith</td>
+                <td>Cardiology</td>
+                <td>john.smith@example.com</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <!-- Add more doctor rows as needed -->
+            </tbody>
+          </table>
+
+          <form class="add-doctor-form">
+            <h3>Add New Doctor</h3>
+            <label for="doctor-name">Name:</label>
+            <input type="text" id="doctor-name" name="doctor-name" required>
+            
+            <label for="doctor-specialization">Specialization:</label>
+            <input type="text" id="doctor-specialization" name="doctor-specialization" required>
+            
+            <label for="doctor-contact">Contact:</label>
+            <input type="email" id="doctor-contact" name="doctor-contact" required>
+            
+            <button type="submit">Add Doctor</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

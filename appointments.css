@@ -1,0 +1,93 @@
+/* appointments.css */
+
+.appointments-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th, .appointments-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.appointments-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.appointments-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.appointments-table tr:hover {
+  background-color: #ddd;
+}
+
+.appointments-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-appointment-form label {
+  font-weight: bold;
+}
+
+.add-appointment-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-appointment-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-appointment-form button:hover {
+  background-color: #45a049;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}

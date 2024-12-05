@@ -1,0 +1,93 @@
+/* records.css */
+
+.records-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}z
+
+.records-table th, .records-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.records-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.records-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.records-table tr:hover {
+  background-color: #ddd;
+}
+
+.records-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-record-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-record-form label {
+  font-weight: bold;
+}
+
+.add-record-form input, .add-record-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-record-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-record-form button:hover {
+  background-color: #45a049;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}

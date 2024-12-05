@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCare - Appointments</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="appointments.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <i data-lucide="stethoscope" class="logo-icon"></i>
+        <h1>MediCare</h1>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="patients.html"><i data-lucide="users"></i>Patients</a>
+          </li>
+          <li class="active">
+            <a href="appointments.html"><i data-lucide="calendar-clock"></i>Appointments</a>
+          </li>
+          <li>
+            <a href="doctors.html"><i data-lucide="stethoscope"></i>Doctors</a>
+          </li>
+          <li>
+            <a href="records.html"><i data-lucide="clipboard-list"></i>Records</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button><i data-lucide="settings"></i>Settings</button>
+        <button><i data-lucide="log-out"></i>Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <div class="header-content">
+          <button class="notification">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          
+          <div class="user">
+            <div class="user-info">
+              <p class="user-name">Dr. Sarah Wilson</p>
+              <p class="user-role">Head of Cardiology</p>
+            </div>
+            <div class="user-avatar">
+              <i data-lucide="user"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Appointments -->
+      <section id="appointments">
+        <h2>Appointments</h2>
+        <div class="appointments-content">
+          <table class="appointments-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Dr. Smith</td>
+                <td>2023-10-01</td>
+                <td>10:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <!-- Add more appointment rows as needed -->
+            </tbody>
+          </table>
+
+          <form class="add-appointment-form">
+            <h3>Schedule New Appointment</h3>
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+            
+            <label for="doctor-name">Doctor:</label>
+            <input type="text" id="doctor-name" name="doctor-name" required>
+            
+            <label for="appointment-date">Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+            
+            <label for="appointment-time">Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+            
+            <button type="submit">Schedule Appointment</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
