@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MediCare - Hospital Management System</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -13,44 +13,39 @@
     <aside class="sidebar">
       <div class="logo">
         <i data-lucide="stethoscope" class="logo-icon"></i>
-        <h1>MediCare</h1>
+        <h1>MediCare</h1>  
       </div>
       
       <nav>
         <ul>
           <li class="active">
-            <a href="#"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+            <a href="index.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
           </li>
           <li>
             <a href="patients.html"><i data-lucide="users"></i>Patients</a>
           </li>
           <li>
-            <a href="#"><i data-lucide="calendar-clock"></i>Appointments</a>
+            <a href="appointments.html"><i data-lucide="calendar-clock"></i>Appointments</a>
           </li>
           <li>
-            <a href="#"><i data-lucide="stethoscope"></i>Doctors</a>
+            <a href="doctors.html"><i data-lucide="stethoscope"></i>Doctors</a>
           </li>
           <li>
-            <a href="#"><i data-lucide="clipboard-list"></i>Records</a>
+            <a href="records.html"><i data-lucide="clipboard-list"></i>Records</a>
           </li>
         </ul>
       </nav>
 
       <div class="sidebar-footer">
         <button><i data-lucide="settings"></i>Settings</button>
-        <button><i data-lucide="log-out"></i>Logout</button>
+        <button id="logout-btn"><i data-lucide="log-out"></i>Logout</button>
       </div>
     </aside>
 
-    <main class="main">
-      <!-- Header -->
+    <!-- Main Content -->
+    <main class="main-content">
       <header>
-        <div class="search">
-          <i data-lucide="search"></i>
-          <input type="text" placeholder="Search patients, doctors, or departments...">
-        </div>
-
-        <div class="header-right">
+        <div class="header-content">
           <button class="notification">
             <i data-lucide="bell"></i>
             <span class="notification-dot"></span>
@@ -92,144 +87,21 @@
               <div class="stat-icon green">
                 <i data-lucide="calendar-clock"></i>
               </div>
-              <span class="change positive">+8.1%</span>
+              <span class="change positive">+8.3%</span>
             </div>
-            <h3>42</h3>
+            <h3>320</h3>
             <p>Appointments Today</p>
           </div>
 
           <div class="stat-card">
             <div class="stat-header">
               <div class="stat-icon purple">
-                <i data-lucide="activity"></i>
+                <i data-lucide="stethoscope"></i>
               </div>
-              <span class="change negative">-2.3%</span>
+              <span class="change neutral">0%</span>
             </div>
-            <h3>156</h3>
-            <p>Active Cases</p>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-header">
-              <div class="stat-icon orange">
-                <i data-lucide="trending-up"></i>
-              </div>
-              <span class="change positive">+3.2%</span>
-            </div>
-            <h3>94.2%</h3>
-            <p>Recovery Rate</p>
-          </div>
-        </div>
-
-        <div class="dashboard-grid">
-          <div class="card">
-            <h2>Department Status</h2>
-            <div class="departments">
-              <div class="department">
-                <div>
-                  <h3>Cardiology</h3>
-                  <p>45 patients</p>
-                </div>
-                <div class="occupancy">
-                  <div class="occupancy-header">
-                    <span>Occupancy</span>
-                    <span>82%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 82%"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="department">
-                <div>
-                  <h3>Neurology</h3>
-                  <p>32 patients</p>
-                </div>
-                <div class="occupancy">
-                  <div class="occupancy-header">
-                    <span>Occupancy</span>
-                    <span>74%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 74%"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="department">
-                <div>
-                  <h3>Pediatrics</h3>
-                  <p>28 patients</p>
-                </div>
-                <div class="occupancy">
-                  <div class="occupancy-header">
-                    <span>Occupancy</span>
-                    <span>65%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 65%"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="department">
-                <div>
-                  <h3>Orthopedics</h3>
-                  <p>36 patients</p>
-                </div>
-                <div class="occupancy">
-                  <div class="occupancy-header">
-                    <span>Occupancy</span>
-                    <span>78%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 78%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <h2>Recent Admissions</h2>
-            <div class="admissions">
-              <div class="admission">
-                <div class="admission-avatar"></div>
-                <div class="admission-info">
-                  <h3>Patient #1</h3>
-                  <p>Admitted 2 hours ago</p>
-                </div>
-                <span class="status">Stable</span>
-              </div>
-
-              <div class="admission">
-                <div class="admission-avatar"></div>
-                <div class="admission-info">
-                  <h3>Patient #2</h3>
-                  <p>Admitted 2 hours ago</p>
-                </div>
-                <span class="status">Stable</span>
-              </div>
-
-              <div class="admission">
-                <div class="admission-avatar"></div>
-                <div class="admission-info">
-                  <h3>Patient #3</h3>
-                  <p>Admitted 2 hours ago</p>
-                </div>
-                <span class="status">Stable</span>
-              </div>
-
-              <div class="admission">
-                <div class="admission-avatar"></div>
-                <div class="admission-info">
-                  <h3>Patient #4</h3>
-                  <p>Admitted 2 hours ago</p>
-                </div>
-                <span class="status">Stable</span>
-              </div>
-            </div>
+            <h3>42</h3>
+            <p>Active Doctors</p>
           </div>
         </div>
       </div>
@@ -237,7 +109,67 @@
   </div>
 
   <script>
+    // Initialize Lucide icons
     lucide.createIcons();
-  </script>
+    
+    // Check if user is authenticated
+    async function checkAuth() {
+      try {
+        // Get token from localStorage
+        const token = localStorage.getItem('authToken');
+        
+        if (!token) {
+          window.location.href = 'login.html';
+          return;
+        }
+    
+        const response = await fetch('http://localhost:3000/api/auth/check', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+    
+        if (response.status === 401) {
+          // Clear invalid token
+          localStorage.removeItem('authToken');
+          window.location.href = 'login.html';
+          return;
+        }
+    
+        if (!response.ok) {
+          console.error('Auth check failed with status:', response.status);
+          return; // Stay on current page if server error
+        }
+    
+        // Valid auth - do nothing and stay on dashboard
+      } catch (err) {
+        console.error('Auth check failed:', err);
+        // Only redirect on actual auth failures, not network errors
+        if (err.name === 'TypeError' || err.name === 'NetworkError') {
+          return; // Stay on current page if server is down
+        }
+      }
+    }
+    
+    // Handle logout
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        await fetch('http://localhost:3000/api/logout', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        localStorage.removeItem('authToken'); 
+        window.location.href = 'login.html';
+      } catch (err) {
+        console.error('Logout failed:', err);
+      }
+    });
+    
+    // Check auth on page load
+    checkAuth();
+    </script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
